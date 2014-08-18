@@ -218,7 +218,10 @@
 
     var currencyKeyBoard = function (event, viewValue) {
         var which = event.which;
-        return  ( viewValue.toString().indexOf('$') === -1 && which === 52 && event.shiftKey);
+        return  (
+            ( viewValue.toString().indexOf('$') === -1 && which === 52 && event.shiftKey)
+            || ( viewValue.toString().indexOf('£') === -1 && which === 51 && event.shiftKey)
+        );
     };
 
     var floatKeyBoard = function (event, viewValue) {
